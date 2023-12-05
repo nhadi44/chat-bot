@@ -1,0 +1,7 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+@import "./assets/scss/test.scss";
+@import "./assets/scss/chat.scss";
+
+@import "tailwindcss/utilities";

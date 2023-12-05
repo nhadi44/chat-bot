@@ -1,0 +1,65 @@
+@layer components {
+  .chat {
+    &__btn {
+      @apply bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition-all duration-300 ease-in-out;
+    }
+
+    &__wrapper {
+      @apply w-[25rem] shadow-lg rounded-md overflow-hidden bg-white;
+    }
+
+    &__content {
+      @apply translate-y-6 opacity-0 transition-all duration-200 ease-in-out;
+      //@apply -translate-y-2 opacity-100 transition-all duration-200 ease-in-out;
+    }
+
+    &__content-show {
+      @apply -translate-y-2 opacity-100;
+    }
+
+    &__header {
+      @apply bg-green-600 p-3 flex items-center gap-3 rounded-tl-md rounded-tr-md;
+    }
+
+    &__header-avatar {
+      @apply bg-white w-12 h-12 p-2 rounded-full;
+    }
+
+    &__header-title {
+      @apply text-white text-[14px] font-semibold;
+    }
+
+    &__header-subtitle {
+      @apply text-white text-[12px];
+    }
+
+    &__body {
+      // make the body scrollable
+      @apply bg-slate-50 p-3 overflow-y-auto h-[20rem] flex flex-col gap-3;
+    }
+
+    &__body > *:nth-child(even) {
+      @apply p-3 rounded-tl-md rounded-tr-md rounded-bl-md w-[8rem] self-end;
+    }
+
+    &__bot-response {
+      @apply flex gap-3 items-start bg-green-500 p-3 text-white w-[8rem] rounded-tr-md rounded-tl-md rounded-br-md;
+    }
+
+    &__user-response {
+      @apply bg-slate-300 p-3 w-[8rem];
+    }
+
+    &__user-answer {
+      @apply py-2 px-3 flex items-center justify-between gap-2;
+    }
+
+    &__user-input {
+      @apply rounded-md p-[.5rem] w-full border border-gray-300 focus:outline-none;
+    }
+
+    &__btn-submit {
+      @apply bg-green-500 text-white p-[.6rem] rounded-md hover:bg-green-600 transition-all duration-300 ease-in-out;
+    }
+  }
+}
